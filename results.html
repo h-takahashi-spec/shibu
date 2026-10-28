@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>みんなの結果｜ロボットは、だれの代わりになれる？</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap wide">
+  <header class="topbar">
+    <a class="brand" href="index.html"><b id="siteTitle">ロボットは、だれの代わりになれる？</b><span>みんなの結果</span></a>
+    <nav class="row"><a class="chiplink" href="index.html">回答ページ</a></nav>
+  </header>
+  <div id="demoBanner" class="demo-banner hidden">デモモード：架空のサンプル回答と、このブラウザで答えた回答を表示しています。先生モードのパスワードは <b>demo</b> です。</div>
+
+  <section class="panel tight teacher hidden" id="teacherPanel">
+    <div class="filters">
+      <b>先生モード</b>
+      <span id="tLogin"><input type="password" id="pw" placeholder="パスワード" style="width:10em;padding:3px 8px"> <button class="btn ghost" id="pwBtn">入る</button></span>
+      <span id="tTools" class="hidden row" style="gap:8px">
+        <button class="btn primary" id="classifyBtn" style="padding:4px 16px">未分類の理由をAIで分類</button>
+        <button class="btn ghost" id="csvBtn">CSVダウンロード</button>
+        <button class="btn ghost hidden" id="resetBtn">デモデータを初期化</button>
+        <button class="btn ghost" id="logoutBtn">出る</button>
+      </span>
+    </div>
+    <div class="small" id="tMsg" aria-live="polite"></div>
+  </section>
+
+  <nav class="tabs" id="tabs" aria-label="関係の切り替え"></nav>
+  <main id="view" aria-live="polite"><div class="panel">読み込み中…</div></main>
+
+  <p class="small muted" style="text-align:center;margin-top:24px">
+    <label><input type="checkbox" id="auto" checked> 自動更新</label>
+    <button class="btn ghost" id="reload" style="padding:2px 12px">いますぐ更新</button>
+    <a href="?t=1" id="tLink">先生用</a>
+  </p>
+</div>
+<div class="toast hidden" id="toast"></div>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/art.js"></script>
+<script src="js/results.js"></script>
+</body>
+</html>
